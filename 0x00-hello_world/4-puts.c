@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Using the function puts to print this string */
+/* Main: Using the function puts to print a string */
 
 int main(void)
 {
