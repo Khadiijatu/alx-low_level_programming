@@ -1,0 +1,3 @@
+Here is what each script does. 
+0-Preprocessor:  Writes a script that runs a C file through the preprocessor and save the result into another file    
+1-compiler: ...
