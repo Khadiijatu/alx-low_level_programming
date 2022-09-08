@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* Main: Using the function puts to print a string */
+/**
+ * Main: Use the function puts to print a string
+ *
+ * Return: 0 
+ */
 
 int main(void)
 {
