@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /**
- *
- * main - Print a string with quotes without using the function write
+ * main - Print a string with quotes using the function write
  *
  * Return: 1
  */
