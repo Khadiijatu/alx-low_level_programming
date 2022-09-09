@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/**                                                                                                                                   
+/**
  * main - Print the alphabet in lower case
  *
  * Return: 0
@@ -15,5 +15,5 @@ int main(void)
 		putchar(letter);
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
