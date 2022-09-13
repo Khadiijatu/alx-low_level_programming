@@ -18,21 +18,18 @@ void print_times_table(int n)
 			for (j = 1; j <= n; j++)
 			{
 				int k = i * j;
+
+				_putchar(',');
+				_putchar(' ');
 				if (k > 99)
-					_putchar(',');
-					_putchar(' ');
 					_putchar(k / 100 + '0');
 					_putchar((k / 10) % 10 + '0');
 					_putchar(k % 10 + '0');
 				else if (k < 10)
-					_putchar(',');
-					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(k % 10 + '0');
 				else if (k > 9)
-					_putchar(',');
-					_putchar(' ');
 					_putchar(' ');
 					_putchar(k / 10 + '0');
 					_putchar(k % 10 + '0');
