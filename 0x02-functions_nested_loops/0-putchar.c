@@ -11,7 +11,7 @@ int main(void)
 	char word[] = "_putchar\n";
 	int i = 0;
 
-	while(i < 12)
+	while (i < 10)
 	{
 		_putchar(word[i]);
 		i++;
