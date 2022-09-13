@@ -11,10 +11,10 @@ int main(void)
 	char word[] = "_putchar\n";
 	int i = 0;
 
-	while (i < 10)
+	for (i = 0; i < 8; i++)
 	{
 		_putchar(word[i]);
-		i++;
 	}
+	_putchar('\n');
 	return (0);
 }
