@@ -13,6 +13,7 @@ int main(void)
 	long b = 2;
 	long c = 0;
 	long d = 0;
+	long e;
 
 	printf("%ld, %ld, ", a, b);
 	for (i = 3; i <= 98; i++)
