@@ -9,20 +9,37 @@
 int main(void)
 {
 	int i;
-	long int f;
-	long int f1 = 1;
-	long int f2 = 2;
-	
-	printf("%i, %i, ", f1, f2);
-	for (i = 0; i <= 98; i++)
-	{
-		f = f1 + f2;
-		f1 = f2;
-		f2 = f;
+	long a = 1;
+	long b = 2;
+	long c = 0;
+	long d = 0;
 
-		printf("%lu", f);
-		
+	printf("%ld, %ld, ", a, b);
+	for (i = 3; i <= 98; i++)
+	{
+		b = b + a;
+		a = b - a;
+		if (b / 1000000000 > 0)
+		{
+			d++;
+			b = b % 1000000000;
+		}
+		d = d + c;
+		c = d - c;
+		if (d)
+		{
+			printf("%ld", d);
+			e = b;
+			while (e < 100000000)
+			{
+				printf("0");
+				e *= 10;
+			}
+		}
+		printf("%ld", b);
 		if (i < 98)
 			printf(", ");
 	}
+	printf("\n");
+	return (0);
 }
