@@ -13,13 +13,12 @@ int main(void)
 	long F1 = 1;
 	long F2 = 2;
 
-	printf("%ld, %ld, ", F1, F2);
-	for (i = 2; i <= 32; i++)
+	for (i = 3; i <= 32; i++)
 	{
-		if (F2 % 2 == 0)
-			sum += F2;
 		F2 += F1;
 		F1 = F2 - F1;
+		if (F2 % 2 == 0)
+			sum += F2;
 	}
 	printf("%ld\n", sum);
 	return (0);
