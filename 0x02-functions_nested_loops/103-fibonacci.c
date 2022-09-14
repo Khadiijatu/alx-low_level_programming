@@ -14,7 +14,7 @@ int main(void)
 	long F2 = 2;
 
 	printf("%ld, %ld, ", F1, F2);
-	for (i = F1 + F2; i <= 32; i++)
+	for (i = 2; i <= 32; i++)
 	{
 		F2 += F1;
 		F1 = F2 - F1;
