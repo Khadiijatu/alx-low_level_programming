@@ -16,10 +16,10 @@ int main(void)
 	printf("%ld, %ld, ", F1, F2);
 	for (i = 2; i <= 32; i++)
 	{
-		F2 += F1;
-		F1 = F2 - F1;
 		if (F2 % 2 == 0)
 			sum += F2;
+		F2 += F1;
+		F1 = F2 - F1;
 	}
 	printf("%ld\n", sum);
 	return (0);
