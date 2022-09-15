@@ -3,8 +3,6 @@
 /**
  * print_diagonal - Draws a diagonal line
  * @n: int
- *
- * Return: 0
  */
 
 void print_diagonal(int n)
@@ -15,14 +13,17 @@ void print_diagonal(int n)
 		_putchar('\n');
 	else
 	{
-		for (i = 1; i < n; i++)
+		i = 0;
+		while (j < i)
 		{
 			for (j = 1; j < i; j++)
 			{
 				_putchar(' ');
+				j++;
 			}
 			_putchar('\\');
 			_putchar('\n');
+			i++;
 		}
 	}
 }
