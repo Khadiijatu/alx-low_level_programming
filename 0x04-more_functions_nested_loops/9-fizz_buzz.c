@@ -2,25 +2,43 @@
 #include "main.h"
 
 /**
- * more_numbers: Prints 10 times the numbers from 0 to 14
+ * more_numbers - Prints the numbers from 1 to 100
+ * replacing multiples of 3 with Fizz
+ * multiples of 5 with Buzz, and multiple of both with BuzzFizz
  *
- * Return: void
+ * Return: 0
  */
 
-void more_numbers(void)
+int main(void)
 {
-	int i, j;
+	int i;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 1; i <= 100; i++)
 	{
-		for (j = 0; j <= 14; i++)
+		if (i % 3 == 0)
 		{
-			if (j > 9)
+			if (i % 5 == 0)
 			{
-				_putchar('1');
+				printf("FizzBuzz ");
 			}
-			_putchar(j % 10 + '0');
+			else
+			{
+				printf("Fizz ");
+			}
 		}
-	_putchar('\n');
-	}
+		else if (i % 5 == 0)
+		{
+			if (x < 100)
+			{
+				printf("Buzz ");
+			}
+			else
+			{
+				printf("Buzz\n");
+			}
+		}
+		else
+		{
+			printf("%d ", i);
+		}
 }
