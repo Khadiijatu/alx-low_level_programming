@@ -18,9 +18,8 @@ int largest_prime_factor(long n)
 	if (i == n)
 		return (i);
 	else
-		return (largest_prime_factor(n /i));
+		return (largest_prime_factor(n / i));
 }
-
 
 /**
  * main - Prints the largest prime factor of 612852475143
