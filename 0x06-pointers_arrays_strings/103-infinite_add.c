@@ -13,7 +13,6 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, j;
-	char *sum;
 
 	while (n1[i])
 	{
@@ -24,19 +23,19 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j++;
 	}
 
-	*sum = r[size_r];
+	*r = r[size_r];
 	while (n1[i] > 0 || n1[j] > 0)
 	{
 		if (n1[i] + n2[j] > 0)
 		{
-			*sum = n1[i - 1] + n2[j - 1] + 1;
+			*r = n1[i - 1] + n2[j - 1] + 1;
 		}
 		else
 		{
-			*sum = n1[i] + n2[j];
+			*r = n1[i] + n2[j];
 		}
 		i--;
 		j--;
 	}
-	return (sum);
+	return (r);
 }
