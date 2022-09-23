@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *leet - Encodes a string using rot13
+ * *rot13 - Encodes a string using rot13
  * @str : char pointer
  *
  * Return: encoded string
