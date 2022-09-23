@@ -10,7 +10,7 @@
 char *rot13(char *str)
 {
 	char *letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *code_rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, j;
 
 	for (i = 0; str[i] != '\0'; i++)
@@ -18,8 +18,7 @@ char *rot13(char *str)
 		for (j = 0; letters[j] != '\0'; j++)
 		{
 			if (str[i] == letters[j])
-				str[i] = rot13[j];
-				break;
+				str[i] = code_rot13[j];
 		}
 	}
 	return (str);
