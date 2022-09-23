@@ -13,13 +13,20 @@ char *rot13(char *str)
 	char *code_rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+	while (str[i])
 	{
-		for (j = 0; letters[j] != '\0'; j++)
+		j = 0;
+		while (letters[j])
 		{
 			if (str[i] == letters[j])
+			{
 				str[i] = code_rot13[j];
+				break;
+			}
+			j++;
 		}
+		i++;
 	}
 	return (str);
 }
