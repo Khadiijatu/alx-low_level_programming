@@ -14,7 +14,7 @@ char *cap_string(char *str)
 		'{', '}'}
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[0] >= 'a' && str[0] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] -= 32;
 		}
