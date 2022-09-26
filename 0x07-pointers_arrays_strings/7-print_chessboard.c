@@ -24,7 +24,7 @@ void print_chessboard(char (*a)[8])
  *
  * Return: 0
  */
-
+/*
 int main(void)
 {
 	int i, j;
@@ -43,3 +43,4 @@ int main(void)
 	print_chessboard(board);
 	return (0);
 }
+*/
