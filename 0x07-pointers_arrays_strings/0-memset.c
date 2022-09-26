@@ -4,7 +4,7 @@
  * *_memset - Fills memory with a constant byte
  * @s: char pointer
  * @b: char
- * @: insigned int
+ * @n: insigned int
  *
  * Return: pointer to the memory area s
  */
