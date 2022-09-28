@@ -10,7 +10,7 @@
 
 int factors(int f, int n)
 {
-	if if (n % f == 0 || n < 2)
+	if (n % f == 0 || n < 2)
 	{
 		return (0);
 	}
