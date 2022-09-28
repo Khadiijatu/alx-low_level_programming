@@ -14,7 +14,7 @@ int factors(int f, int n)
 	{
 		return (0);
 	}
-	else if (n == f)
+	else if (n / f == 1)
 	{
 		return (1);
 	}
