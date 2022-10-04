@@ -6,7 +6,7 @@
  * @s1: char pointer
  * @s2: char pointer
  *
- * Return:pointer to concatened string, or NULL
+ * Return: pointer to concatened string, or NULL
  */
 
 char *str_concat(char *s1, char *s2)
