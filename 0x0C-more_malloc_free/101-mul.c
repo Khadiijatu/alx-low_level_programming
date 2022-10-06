@@ -62,6 +62,7 @@ void print_number(int n);
 
 int main(int argc, char *argv[])
 {
+	/* Initial attempt */
 	int i, j;
 	if (argc != 3)
 	{
