@@ -50,6 +50,8 @@ void print(char *s)
 		_putchar('\n');
 }
 
+void print_number(int n);
+
 /**
  * main - multiplies two positive numbers
  * @argc: int
@@ -77,6 +79,33 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	print("%d", _atoi(argv[1]) *  _atoi(argv[2]));
+	print_number(_atoi(argv[1]) * _atoi(argv[2]));
 	return (0);
+}
+
+/**
+ * print_number - Prints an integer
+ * @n: int
+ *
+ */
+
+void print_number(int n)
+{
+	if (n < 0)
+	{
+		_putchar('-');
+		if (n / 10)
+		{
+			print_number(n / -10);
+		}
+		_putchar('0' - n % 10);
+	}
+	else
+	{
+		if (n / 10)
+		{
+			print_number(n / 10);
+		}
+		_putchar('0' + n % 10);
+	}
 }
