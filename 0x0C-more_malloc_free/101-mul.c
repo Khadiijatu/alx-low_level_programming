@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _atoi - Converts a string to an integer
@@ -35,7 +36,7 @@ int _atoi(char *s)
 }
 
 /**
- * _printf - Prints a string
+ * print - Prints a string
  * @s: char pointer
  */
 
@@ -64,6 +65,7 @@ int main(int argc, char *argv[])
 {
 	/* Initial attempt */
 	int i, j;
+
 	if (argc != 3)
 	{
 		print("Error");
@@ -80,7 +82,7 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	print_number(_atoi(argv[1]) * _atoi(argv[2]));
+	printf("%lu\n", atol(argv[1]) * atol(argv[2]));
 	return (0);
 }
 
