@@ -46,7 +46,6 @@ int _atol(char *s)
 int main(int argc, char *argv[])
 {
 	int i, j;
-	unsigned long n;
 
 	if (argc != 3)
 	{
@@ -64,7 +63,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	n = _atol(argv[1]) * _atol(argv[2]);
-	printf("%lu\n", n);
+	printf("%lu\n", _atol(argv[1]) * _atol(argv[2]));
 	return (0);
 }
