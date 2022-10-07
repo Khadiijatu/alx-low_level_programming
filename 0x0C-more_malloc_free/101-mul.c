@@ -43,9 +43,9 @@ unsigned long int _atol(char *s)
  * Return: 0 or 98
  */
 
-int main(int argc, char *argv[])
+int main(long int argc, char *argv[])
 {
-	int i, j;
+	long int i, j;
 
 	if (argc != 3)
 	{
