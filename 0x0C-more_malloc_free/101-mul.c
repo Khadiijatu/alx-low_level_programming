@@ -43,7 +43,7 @@ unsigned long int _atol(char *s)
  * Return: 0 or 98
  */
 
-int main(long int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	long int i, j;
 
