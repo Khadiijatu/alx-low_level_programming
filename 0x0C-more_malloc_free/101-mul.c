@@ -9,7 +9,7 @@
  * Return: integer
  */
 
-long unsigned int _atol(char *s)
+unsigned long int _atol(char *s)
 {
 	long i = 0;
 	long j = 1;
