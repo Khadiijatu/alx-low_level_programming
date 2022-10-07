@@ -3,17 +3,17 @@
 #include <stdio.h>
 
 /**
- * _atoi - Converts a string to an integer
+ * _atol - Converts a string to an integer
  * @s: char
  *
  * Return: integer
  */
 
-int _atoi(char *s)
+int _atol(char *s)
 {
-	int i = 0;
-	int j = 1;
-	int num = 0;
+	long i = 0;
+	long j = 1;
+	long num = 0;
 
 	while (s[i] != '\0')
 	{
@@ -36,24 +36,6 @@ int _atoi(char *s)
 }
 
 /**
- * print - Prints a string
- * @s: char pointer
- */
-
-void print(char *s)
-{
-	if (*s != '\0')
-	{
-		_putchar(*s);
-		print(s + 1);
-	}
-	else
-		_putchar('\n');
-}
-
-void print_number(int n);
-
-/**
  * main - multiplies two positive numbers
  * @argc: int
  * @argv: char type pointer
@@ -63,12 +45,12 @@ void print_number(int n);
 
 int main(int argc, char *argv[])
 {
-	/* Initial attempt */
 	int i, j;
+	unsigned long n;
 
 	if (argc != 3)
 	{
-		print("Error");
+		printf("Error\n");
 		exit(98);
 	}
 	for (i = 1; i < argc; i++)
@@ -77,38 +59,12 @@ int main(int argc, char *argv[])
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
-				print("Error");
+				printf("Error\n");
 				exit(98);
 			}
 		}
 	}
-	printf("%lu\n", atol(argv[1]) * atol(argv[2]));
+	n = _atol(argv[1]) * _atol(argv[2]);
+	printf("%lu\n", n);
 	return (0);
-}
-
-/**
- * print_number - Prints an integer
- * @n: int
- *
- */
-
-void print_number(int n)
-{
-	if (n < 0)
-	{
-		_putchar('-');
-		if (n / 10)
-		{
-			print_number(n / -10);
-		}
-		_putchar('0' - n % 10);
-	}
-	else
-	{
-		if (n / 10)
-		{
-			print_number(n / 10);
-		}
-		_putchar('0' + n % 10);
-	}
 }
