@@ -1,6 +1,8 @@
 #include "dog.h"
 #include <stdlib.h>
 
+char *_strdup(char *str);
+
 /**
  * *new_dog - creates a new dog
  * @name: pointer to char
@@ -13,28 +15,50 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *p;
-	int i, j, k, l;
-
-	i = 0;
-	while (name[i])
-		i++;
-	j = 0;
-	while (owner[j])
-		j++;
 
 	p = malloc(sizeof(dog_t));
 	if (p == NULL)
 		return (NULL);
+	(*p).name = _strdup(name);
 	(*p).age = age;
-	(*p).name = malloc(i);
-	(*p).owner = malloc(j);
-	k = 0;
-	do {
-		(*p).name[k] = name[k];
-	} while (name[k++]);
-	l = 0;
-	do {
-		(*p).owner[l] = owner[l];
-	} while (owner[l++]);
+	(*p).owner = _strdup(owner);
+	if (!(*p).name)
+	{
+		free(p);
+		return (NULL);
+	}
+	if (!(*p).owner)
+	{
+		free((*p).name);
+		free(p);
+		return (NULL);
+	}
+	return (p);
+}
+
+/**
+ * *_strdup - returns pointer to allocated space containing copy of string
+ * @str: char pointer
+ *
+ * Return: pointer to duplicate string, or NULL
+ */
+
+char *_strdup(char *str)
+{
+	char *p;
+	int i, j;
+
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (str[i])
+		i++;
+	p = malloc(sizeof(char) * i + 1);
+	if (p == NULL)
+		return (NULL);
+	j = 0;
+	for (j = 0; str[j]; j++)
+		p[j] = str[j];
+	p[j] = '\0';
 	return (p);
 }
