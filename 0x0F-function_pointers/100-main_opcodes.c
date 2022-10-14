@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < n; i++)
 	{
-		printf("%02x", *((char *)&main + i));
+		printf("%02x", *((unsigned char *)&main + i));
 		if (i < n - 1)
 			printf(" ");
 	}
