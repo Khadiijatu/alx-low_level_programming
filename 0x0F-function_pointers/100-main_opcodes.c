@@ -8,7 +8,7 @@
  *
  * Return: 0, 1 or 2
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i;
 	int a = atoi(argv[1]);
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	i = 0;
 	while (i < a)
 	{
-		printf("%02x", *((char *)main + i));
+		printf("%02x", *((unsigned char *)main + i));
 		i++;
 		if (a != 1)
 			printf(" ");
