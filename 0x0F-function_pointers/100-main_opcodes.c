@@ -11,24 +11,22 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int a = atoi(argv[1]);
+	int n = atoi(argv[1]);
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	if (a < 0)
+	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	i = 0;
-	while (i < a)
+	for (i = 0; i < n; i++)
 	{
-		printf("%02x", *((unsigned char *)main + i));
-		i++;
-		if (a != 1)
+		printf("%02x", *((char *)&main + i));
+		if (i < n - 1)
 			printf(" ");
 	}
 	printf("\n");
