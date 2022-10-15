@@ -29,6 +29,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 'f':
 				printf("%s%f", separator, va_arg(args, double));
+				break;
 			case 's':
 				string = va_arg(args, char *);
 				if (!string)
